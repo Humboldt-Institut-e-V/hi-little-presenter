@@ -1,0 +1,149 @@
+html ,
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10.5pt;
+	margin: 0px;
+	padding: 0px;
+	min-width: 320px;
+	background-color: white;
+	color: #1c4491;
+	hyphens: auto;
+	background-color: #E0E0E0;
+}
+
+html ,
+body,
+div,
+form,
+input {
+    position: relative;
+}
+
+div#page {
+	max-width: 600px;
+	padding: 20px 40px;
+	margin: 0 auto;
+	box-shadow: 2px 2px 12px black;
+	text-align: center;
+	background-color: white;
+}
+div.primary_content {
+    min-height: 94vh;
+    border-bottom: 1px solid #E0E0E0;
+}
+h1 {
+	width: 100%;
+	text-align: center;
+	font-size: 200%;
+	font-weight: bold;
+	line-height: 250%;
+	margin: 0px;
+	padding: 0px;
+
+}
+div.logo {
+    width: 100%;
+    height: 280px;
+}
+
+img.logo {
+    width: 300px;
+    height: 280px;
+}
+
+img#upload_spinner {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+div.error_messages {
+    height: 40px;
+    padding: 0px;
+    color: red;
+}
+
+div.upload_form {
+	text-align: center;
+    padding-bottom: 20px;
+}
+
+input.upload_form {
+	width: 280px;
+	padding: 8px;
+	background-color: white;
+	color: #1c4491;
+	border: 1px solid #1c4491;
+	margin: 10px;
+	box-shadow: 2px 2px 6px black;
+	cursor: pointer;
+}
+
+input.upload_form_submit {
+	width: 300px;
+	padding: 8px;
+	background-color: white;
+	color: #1c4491;
+	border: 1px solid #1c4491;
+	margin: 10px;
+	box-shadow: 2px 2px 6px black;
+	cursor: pointer;
+}
+
+div.info_section {
+	color: #999;
+}
+
+div.secondary_content {
+	padding-bottom: 20px;
+}
+div.action_form_line {
+	text-align: center;
+	padding: 40px 0px 0px 0px;
+}
+
+button.action_form {
+	width: 300px;
+	padding: 8px;
+	background-color: white;
+	color: #1c4491;
+	border: 1px solid #1c4491;
+	margin: 10px;
+	box-shadow: 2px 2px 6px black;
+	cursor: pointer;
+}
+
+div#reboot_message,
+div#restart_message {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.9);
+    padding-top: 25%;
+    text-align: center;
+    font-size: 200%;
+    line-height: 150%;
+    color: #1c4491;
+    opacity: 1;
+}
+
+span#reboot_timer {
+
+}
+
+.hidden {
+    opacity: 0;
+}
+.removed {
+    display: none;
+}
+
+input.highlight {
+    background-color: #1c4491;
+    color: white;
+}

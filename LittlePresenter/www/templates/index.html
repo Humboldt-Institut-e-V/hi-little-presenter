@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>{{ hostname }} - Information Display</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script type="text/javascript" src="/static/js/index.js"></script>
+
+  <!-- Webapp for Apple -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="{{ hostname }} - Information Display">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<div id="page">
+	<div class="primary_content">
+		<h1>{{ hostname }} - Information Display</h1>
+		<div class="logo">
+			<img class="logo" src="static/img/logo.png">
+			<img id="upload_spinner" class="hidden" src="static/img/loading.gif">
+		</div>
+		<div class="error_messages">
+		{% for error in error_list %}
+        	{% block error %}
+				<p class="error">ERROR: {{ escape(error) }}</p>
+			{% end %}
+      	{% end %}
+		</div>
+		<div class="upload_form">
+			<form id="upload_form" method="post" enctype="multipart/form-data" onsubmit="highlight_upload()">
+				<input class="upload_form" type="file" name="presentation_file"><br>
+				<input class="upload_form_submit" type="submit" name="submit" value="Upload" id="upload_button">
+			</form>
+		</div>
+		<div class="info_section">
+			<p class="info">
+				You can choose a Portable Document Format (PDF) File or an Open Document Presentation (ODP) File.
+				After uploading the file it will be presented on the connected screen.
+			</p>
+		</div>
+	</div>
+	<div class="secondary_content">
+		<div class="action_form_line">
+			<button class="action_form" onclick="restart_presentation()">Restart the Presentation</button>
+		</div>
+		<div class="action_form_line">
+			<button class="action_form" onclick="reboot_system()">Reboot the System</button>
+		</div>
+	</div>
+</div>
+<div id="reboot_message" class="hidden removed">
+	REBOOTING SYSTEM<br>
+	(<span id="reboot_timer"></span> Sec.)
+</div>
+<div id="restart_message" class="hidden removed">
+	RESTARTING PRESENTATION
+</div>
+<script>
+</script>
+</body>
+</html>

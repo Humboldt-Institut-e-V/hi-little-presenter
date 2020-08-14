@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=LittlePresenter
+Exec=python3 "/home/pi/LittlePresenter/presentation_server.py"
+Type=application
